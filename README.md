@@ -1,16 +1,30 @@
-# blood_donation
+Blood donation application with registration and login functionality.
 
-A new Flutter project.
+App Features:
 
-## Getting Started
+1> Registration functionality using firebase
+2> Session management using firebase
+3> Firestore database for database management
+4> Request for blood feature
 
-This project is a starting point for a Flutter application.
+Screenshots:
 
-A few resources to get you started if this is your first Flutter project:
+Login
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="images/login.jpg" width="200" height="400" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Registration
+
+<img src="images/registration.jpg" width="200" height="400" />
+
+Home Page
+
+<img src="images/home_page.jpg" width="200" height="400" />
+
+Request Form
+
+<img src="images/request.jpg" width="200" height="400" />
+
+Request Screen
+
+<img src="images/request_screen.jpg" width="200" height="400" />
