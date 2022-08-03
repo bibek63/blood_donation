@@ -7,14 +7,14 @@ import '../../constants.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text(
@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                   width: double.infinity,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Column(
                     children: [
                       const SizedBox(
@@ -50,6 +50,7 @@ class LoginScreen extends StatelessWidget {
                       //name
 
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         controller: emailController,
                         cursorColor: Colors.white,
                         decoration: InputDecoration(
@@ -71,6 +72,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       //email
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         controller: passwordController,
                         obscureText: true,
                         cursorColor: Colors.white,
@@ -111,7 +113,8 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 17),
                     ),
                     TextButton(
-                        onPressed: (() => Get.to(() => RegistrationScreen())),
+                        onPressed: (() =>
+                            Get.to(() => const RegistrationScreen())),
                         child: const Text(
                           "Register",
                           style: TextStyle(fontSize: 17),

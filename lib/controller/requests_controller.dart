@@ -39,7 +39,7 @@ class RequestController extends GetxController {
             uid: cred!);
         await fireStore.collection('requests').doc(cred).set(request.toJson());
         Get.snackbar("Request", "Request sent successfully");
-        Get.to(() => HomeScreen());
+        Get.to(() => const HomeScreen());
       } else {
         Get.snackbar("Error on Request", "Please enter all field");
       }

@@ -23,7 +23,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text(
@@ -38,7 +38,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -50,7 +50,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   width: double.infinity,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Column(
                     children: [
                       const SizedBox(
@@ -58,6 +58,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                       //name
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         textCapitalization: TextCapitalization.words,
                         controller: nameController,
                         cursorColor: Colors.white,
@@ -80,6 +81,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                       //blood group
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         controller: emailController,
                         cursorColor: Colors.white,
                         decoration: InputDecoration(
@@ -101,6 +103,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                       //email
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         controller: passwordController,
                         obscureText: true,
                         cursorColor: Colors.white,
@@ -123,6 +126,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                       //password
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         textCapitalization: TextCapitalization.words,
                         controller: addressController,
                         cursorColor: Colors.white,
@@ -144,6 +148,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         height: 15,
                       ),
                       TextFormField(
+                        style: TextStyle(color: formTextColor),
                         controller: phoneNumberController,
                         keyboardType: TextInputType.phone,
                         cursorColor: Colors.white,
@@ -165,6 +170,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         height: 15,
                       ),
                       DropdownButtonFormField(
+                        style: TextStyle(
+                            color: formTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                        iconDisabledColor: formTextColor,
+                        iconEnabledColor: formTextColor,
+                        dropdownColor: containerColor,
                         decoration: InputDecoration(
                             disabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -226,7 +238,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ),
                     TextButton(
                         onPressed: (() => Get.to(() => LoginScreen())),
-                        child: Text(
+                        child: const Text(
                           "LogIn",
                           style: TextStyle(fontSize: 17),
                         ))
